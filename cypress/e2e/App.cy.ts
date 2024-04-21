@@ -12,4 +12,15 @@ describe('Chess App', () => {
       cy.get('#chessboard').find('[data-cy="square"]').should('have.length', 64)
     })
   })
+
+  it('finds selection summary', () => {
+    cy.get('#selection-summary')
+  })
+
+  it('default nav', () => {
+    cy.visit('')
+
+    cy.get('#nav').should('have.class', 'v-navigation-drawer--right')
+  })
+
 })
