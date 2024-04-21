@@ -7,5 +7,9 @@ describe('Chess App', () => {
     it('finds chessboard', () => {
       cy.get('#chessboard')
     })
+
+    it('has correct amount of squares', () => {
+      cy.get('#chessboard').find('[data-cy="square"]').should('have.length', 64)
+    })
   })
 })
